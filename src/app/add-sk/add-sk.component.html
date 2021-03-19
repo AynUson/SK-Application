@@ -1,0 +1,32 @@
+
+<h2 mat-dialog-title class="modal-title">ADD NEW SK OFFICER</h2>
+<mat-divider [vertical]="false"></mat-divider>
+<br />
+<mat-dialog-content class="mat-typography">
+  <div class="modalFields">
+        <h3 class="info-style">ID: <span id="sk_id">21</span></h3>
+        <h3 class="info-style">NAME: Dela Cruz, Juan</h3> 
+
+        <mat-form-field appearance="outline" class="field-style">
+            <mat-label class="label-size">POSITION</mat-label>
+            <mat-select class="projectInfo" [(value)]="Position" required>
+              <mat-option class="projectInfo" value="0"
+                >SK OFFICER</mat-option
+              >
+              <mat-option class="projectInfo" value="1"
+                >SK PRESIDENT</mat-option
+              >
+              <mat-option class="projectInfo" value="2"
+                >SK SECRETARY</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+  </div>
+
+</mat-dialog-content>
+
+<!--Button for Cancel & Submit-->
+<mat-dialog-actions align="end">
+  <button class="modalBtn" mat-raised-button mat-dialog-close>CANCEL</button>
+  <button class="addProjBtn" type="submit" mat-raised-button mat-dialog-close (click)="addSk()">SUBMIT</button>
+</mat-dialog-actions>

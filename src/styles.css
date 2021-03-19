@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+* {
+  font-family: "Poppins", roboto;
+}
+
+:root {
+  --blue: #3b8beb;
+  --white: #ffffff;
+  --grey: #404040;
+  --custom-blue: #4da8da;
+  --black: #000000;
+}
+
+.blue-bg-color {
+  background-color: var(--blue);
+}
+
+.white-color {
+  color: var(--white);
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var(--grey);
+}
+
+.mat-sidenav-style {
+  background-color: rgb(255, 255, 255);
+  color: #404040;
+  font-family: "Poppins", sans-serif;
+  width: 225px;
+  border-right: 0.75px solid lightgrey;
+}
+
+.sidenavbar {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.selected {
+  background-color: #4da8da;
+  color: #ffffff;
+}
+
+mat-sidenav-container,
+mat-sidenav-content {
+  height: 100%;
+  background-color: #eef5f9;
+}
+
+.viewBtn {
+  background-color: var(--custom-blue);
+  color: var(--white);
+}
+
+.user-profile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 20px;
+  margin-top: 35px;
+  border-radius: 50%;
+  bottom: calc(-1 * (80px + 4px));
+  border: 8px solid #979797;
+}
+
+.inline-display {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.display-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.display-start {
+  display: flex;
+  justify-content: flex-start;
+}

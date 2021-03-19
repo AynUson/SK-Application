@@ -1,0 +1,26 @@
+<!--Adding New Projects-->
+<h2 mat-dialog-title class="modal-title">ADD POSITION</h2>
+<mat-divider [vertical]="false"></mat-divider>
+<br>
+
+<mat-dialog-content class="mat-typography">
+  <div class="inline-display">
+    <div class="modalFields">
+      <mat-form-field appearance="outline" class="field-style">
+        <mat-label class="label-size">Position Name</mat-label>
+        <input required [(ngModel)]="posName" matInput class="projectInfo">
+      </mat-form-field>
+      <!-- <br>
+      <mat-form-field appearance="outline" class="field-style">
+        <mat-label class="label-size">Address</mat-label>
+        <input matInput class="projectInfo">
+      </mat-form-field> -->
+    </div>
+  </div>
+</mat-dialog-content>
+
+<!--Button for Cancel & Submit-->
+<mat-dialog-actions align="end">
+  <button class="modalBtn" mat-raised-button mat-dialog-close>CANCEL</button>
+  <button class="addProjBtn" type="submit" mat-raised-button color="primary" mat-dialog-close (click)="addPosition()">SUBMIT</button>
+</mat-dialog-actions>

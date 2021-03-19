@@ -1,0 +1,70 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+  
+  .sidebarcontent {
+    width: 100%;
+    padding: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .user-table-style {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .example-container {
+    min-height: 580px;
+    overflow: auto;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 20px;
+    margin-bottom: 85px;
+  }
+
+  .table-header-style{
+    font-size: 12pt;
+    font-weight: bold;
+  }
+  
+  .title-header {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 25px;
+  }
+  
+  .title-hr-style {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  
+  .add-button {
+    font-family: "Poppins", sans-serif;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    margin-left: 40px;
+    float: right;
+    display: flex;
+    padding-top: 4.5px;
+    padding-bottom: 4.5px;
+    padding-right: 18px;
+  }
+  
+  .add-icon-style {
+    font-size: 22px;
+    padding-right: 2px;
+  }
+  
+  .search-container {
+    margin-right: 35px;
+    padding-top: 12px;
+  }
+  
+  .sidebar-icon {
+    margin-right: 5px;
+  }

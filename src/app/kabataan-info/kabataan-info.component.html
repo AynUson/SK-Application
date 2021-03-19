@@ -1,0 +1,18 @@
+<!--Viewing Kabataan in Modal-->
+<h2 mat-dialog-title class="modal-title">VIEW KABATAAN</h2>
+<mat-divider [vertical]="false"></mat-divider>
+<br />
+<mat-dialog-content class="mat-typography">
+  <div class="modalFields">
+        <h3 class="info-style">NAME: Dela Cruz, Juan</h3>
+        <h3 class="info-style">AGE: 17 y/o</h3>
+        <h3>ADDRESS: #32 Bonifacio Street. Marikina Philippines</h3>    
+  </div>
+
+</mat-dialog-content>
+
+<!--Button for Cancel & Submit-->
+<mat-dialog-actions align="end">
+  <button class="modalBtn" mat-raised-button mat-dialog-close>CANCEL</button>
+  <button class="addProjBtn" type="button" mat-raised-button color="primary"  mat-dialog-close (click)="viewAddSkModal()">ASSIGN AS SK</button>
+</mat-dialog-actions>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+  <title>SK Management System</title>
+</head>
+<body>
+
+
+  <div class="sidenavbar">
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <mat-toolbar class="blue-bg-color">
+          <button mat-icon-button (click)="isExpanded = !isExpanded" mat-button (click)="drawer.toggle()">
+            <mat-icon class="white-color">menu</mat-icon>
+          </button>
+
+          <span class="example-spacer"></span>
+          <button mat-icon-button>
+            <mat-icon class="white-color">logout</mat-icon>
+          </button>
+        </mat-toolbar>
+    </div>
+
+    <!-- SIDENAV -->
+    <mat-sidenav-container autosize>
+            
+        <mat-sidenav #drawer mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()" class="mat-sidenav-style">
+                <img class="user-profile" src="/assets/logo/sklogo.svg">
+                <h2 class="text-centered">Hi, ADMIN</h2> 
+                <mat-divider [vertical]="false"></mat-divider>
+             
+                <button mat-button class="sidebarcontent" type="button" routerLink="/sk-dashboard" routerLinkActive="selected"><mat-icon class="sidebar-icon" >dashboard</mat-icon>Dashboard</button>
+                <button mat-button class="sidebarcontent" type="button" routerLink="/sk-kabataans-view" routerLinkActive="selected"><mat-icon class="sidebar-icon" >group</mat-icon>List of Kabataan</button>
+                <button mat-button class="sidebarcontent" type="button" routerLink="/sk-projects-view" routerLinkActive="selected"><mat-icon class="sidebar-icon" >assignment</mat-icon>Projects</button>
+                <button mat-button class="sidebarcontent" type="button" routerLink="/sk-activities-view" routerLinkActive="selected"><mat-icon class="sidebar-icon">queue</mat-icon>Activities</button> 
+                <button mat-button class="sidebarcontent" type="button" routerLink="/sk-events-view" routerLinkActive="selected"><mat-icon class="sidebar-icon">access_time_filled</mat-icon>Events</button> 
+          </mat-sidenav>
+
+        <mat-sidenav-content>
+          <h1 class="title-header">Activities</h1>
+          <hr class="title-hr-style">
+
+                <div class="inline-display">
+                  <div>
+              </div>
+              <div style="flex-grow: 6"></div> 
+                <div class="search-container"> 
+                <mat-form-field appearance="outline">
+                      <mat-icon matPrefix>search</mat-icon>
+                      <input (keyup)= "getSearchInput($event)" placeholder="Search" matInput>
+                  </mat-form-field>
+                  </div>   
+                  </div>
+
+                  <!-- Activities Card-->
+                  <div class="ProjectsCard">
+
+                    <mat-accordion class="proj-accordion">
+                      <img class="card-expand-image" src="../assets/logo/vaccination.jpg" alt="Photo of a Shiba Inu">
+                      <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header class="header">
+                          <mat-panel-title class="panel-title-style">
+                            Anti-Rabies Control Program
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <h3 class="card-expand-style">Venue: <span class="card-expand-content-style">New Kalalake, O.C</span></h3>
+                        <h3 class="card-expand-style">Date: <span class="card-expand-content-style">March 16 28, 2021</span></h3>
+                        <h3 class="card-expand-style">Officer in Charge: <span class="card-expand-content-style">Daryl John Tadeo</span></h3>
+                        <h3 class="card-expand-style">Description: <span class="card-expand-content-style"> The Barangay of New Kalalake has set its eyes 
+                          in making the city rabies-free for the welfare and benefit of its constituents. In line with this goal, the City Veterinary Office 
+                          of Olongapo City has intensified its campaign against rabies, particularly in the month of March which is Rabies Awareness Month, 
+                          by holding mass anti-rabies vaccination activities and going to different barangays to conduct seminars on responsible pet ownership.</span></h3>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion class="proj-accordion">
+                      <img class="card-expand-image" src="../assets/logo/dental.jpg" alt="Photo of a Shiba Inu">
+                      <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header class="header">
+                          <mat-panel-title class="panel-title-style">
+                            Medical and Dental Mission
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <h3 class="card-expand-style">Venue: <span class="card-expand-content-style">Sta. Rita, O.C</span></h3>
+                        <h3 class="card-expand-style">Date: <span class="card-expand-content-style">July 15, 2021</span></h3>
+                        <h3 class="card-expand-style">Officer in Charge: <span class="card-expand-content-style">Austin Ray Aranda</span></h3>
+                        <h3 class="card-expand-style">Description: <span class="card-expand-content-style"> The area chosen for this Medical Mission is 
+                          in Brgy. Sta. Rita, Olongapo City which is convenient for Mr. Aranda since he is a resident SK nearby. With the support 
+                          of the Barangay Office, he was able to use the Barangay Covered Court as the Medical Mission Venue.</span></h3>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion class="proj-accordion">
+                      <img class="card-expand-image" src="../assets/logo/scholar.jpg" alt="Photo of a Shiba Inu">
+                      <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header class="header">
+                          <mat-panel-title class="panel-title-style">
+                            Scholarships for Youth
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <h3 class="card-expand-style">Venue: <span class="card-expand-content-style">Old Cabalan, O.C</span></h3>
+                        <h3 class="card-expand-style">Date: <span class="card-expand-content-style">March 26, 2021</span></h3>
+                        <h3 class="card-expand-style">Officer in Charge: <span class="card-expand-content-style">Mae Jezriel Llanes</span></h3>
+                        <h3 class="card-expand-style">Description: <span class="card-expand-content-style"> Pursuant to Section 393 paragraph 4, 
+                          of the Local Government Code. This study grant program is granted bu limited to a maximum of two qualified and deserving 
+                          children of Barangay Officials including Barangay Tanod and Lupong Tagapamayapa during the incumbency of the aforesaid officials.</span></h3>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion class="proj-accordion">
+                      <img class="card-expand-image" src="../assets/logo/zumba.jpg" alt="Photo of a Shiba Inu">
+                      <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header class="header">
+                          <mat-panel-title class="panel-title-style">
+                            Free Zumba Classes
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <h3 class="card-expand-style">Venue: <span class="card-expand-content-style">Banicain, O.C</span></h3>
+                        <h3 class="card-expand-style">Date: <span class="card-expand-content-style">September 15 2021</span></h3>
+                        <h3 class="card-expand-style">Officer in Charge: <span class="card-expand-content-style">Geraldyne Ambrocio</span></h3>
+                        <h3 class="card-expand-style">Description: <span class="card-expand-content-style"> Residents of Banicain, Olongapo City need not 
+                          go to gyms to be fit. Mayor Johncel Anjoe Gonzaga is sponsoring free zumba sessions in barangays. Interested parties should organize at 
+                          least 20 individuals to attend the zumba sessions. Afterwards, they should submit a request letter to the mayor’s office stating 
+                          the date and time when they would like the zumba classes to be held.</span></h3>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion class="proj-accordion">
+                      <img class="card-expand-image" src="./assets/logo/liga.jpg" alt="Photo of a Shiba Inu">
+                      <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header class="header">
+                          <mat-panel-title class="panel-title-style">
+                            Basketball League
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <h3 class="card-expand-style">Venue: <span class="card-expand-content-style">Gordon Heights, O.C.</span></h3>
+                        <h3 class="card-expand-style">Date: <span class="card-expand-content-style">April 13 2021</span></h3>
+                        <h3 class="card-expand-style">Officer in Charge: <span class="card-expand-content-style">Ryunosuke Fujii</span></h3>
+                        <h3 class="card-expand-style">Description: <span class="card-expand-content-style"> Summer is the time for sports. The 
+                          Federation of the Sangguniang Kabataan of Gordon Heights, Olongapo City spearheaded by Federated Sangguniang Kabataan 
+                          President Ryu Fujii held a Summer Basketball League 2021 for youths ages 15 to 20 years old.  The theme is 
+                          “Values Development through Sports”. Almost every year the Sangguniang Kabataan will hold a basketball league for 
+                          youths.  The 19 Barangays of the municipality participates the event.</span></h3>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion class="proj-accordion">
+                      <img class="card-expand-image" src="../assets/logo/blood donation.jpg" alt="Photo of a Shiba Inu">
+                      <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header class="header">
+                          <mat-panel-title class="panel-title-style">
+                            Blood Drive Donation
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <h3 class="card-expand-style">Venue: <span class="card-expand-content-style">New Cabalan, O.C.</span></h3>
+                        <h3 class="card-expand-style">Date: <span class="card-expand-content-style">September 10 2019</span></h3>
+                        <h3 class="card-expand-style">Officer in Charge: <span class="card-expand-content-style">Juan Dela Cruz</span></h3>
+                        <h3 class="card-expand-style">Description: <span class="card-expand-content-style"> Barangay of New Cabalan 
+                          establish its own blood donor’s program in line with efforts to promote and encourage voluntary blood donation. 
+                          Municipal Ordinance No. 302, s. 2018 aims to instill public consciousness that blood donation is a humanitarian act; 
+                          provide adequate, safe and affordable supply of blood in every barangay promoting and encouraging voluntary blood 
+                          donation; and inform the public of the importance of voluntary blood donation to curb hazards caused by commercial sale 
+                          of blood.</span></h3>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+                  </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,80 @@
+<!--Adding New Projects-->
+<h2 mat-dialog-title class="modal-title">ADD NEW PROJECT</h2>
+<mat-divider [vertical]="false"></mat-divider>
+<br />
+<mat-dialog-content class="mat-typography">
+  <div class="inline-display">
+  <div class="modalFields">
+
+        <mat-form-field appearance="outline" class="field-style">
+          <mat-label class="label-size">Project Name</mat-label>
+          <input matInput class="projectInfo" type = "text" [(ngModel)]="projectName" required > 
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="outline" class="field-style">
+          <mat-label class="label-size">Project Description</mat-label>
+          <input type = "text" [(ngModel)]="projectDescription" required class="projectInfo" matInput>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="outline" class="field-style">
+          <mat-label class="label-size">Project Type</mat-label>
+          <mat-select class="projectInfo" [(value)]="selectedProjectType" required>
+            <mat-option class="projectInfo" value="0">Project</mat-option>
+            <mat-option class="projectInfo" value="1">Activity</mat-option>
+            <mat-option class="projectInfo" value="2">Event</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        
+        <mat-form-field appearance="outline" class="field-style">
+          <mat-label class="label-size">Venue</mat-label>
+          <input class="projectInfo" matInput type = "text" [(ngModel)]="projectVenue" required  /> 
+          </mat-form-field>
+          <br>
+
+        <mat-form-field appearance="outline" class="field-style">
+          <mat-label class="label-size">Date</mat-label>
+          <input type="date" class="projectInfo" matInput [(ngModel)]="projectDate" required  />
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="outline" class="field-style">
+          <mat-label class="label-size">Officer In Charge</mat-label>
+          <mat-select class="projectInfo" [(value)]="projectOfficer" required>
+            <mat-option class="projectInfo" value="0"
+              >Daryl John Tadeo</mat-option
+            >
+            <mat-option class="projectInfo" value="1"
+              >Austin Ray Aranda</mat-option
+            >
+            <mat-option class="projectInfo" value="2"
+              >Ryunosuke Fujii</mat-option
+            >
+            <mat-option class="projectInfo" value="3"
+              >Mae Jezriel Llanes</mat-option
+            >
+            <mat-option class="projectInfo" value="4"
+              >Geraldyne Ambrocio</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+  </div>
+
+  <!--Image Uploader for Officer-In-Charge-->
+  <div class="image-container">
+    <img class="responsive-image"
+     [src]="imgSrc"
+     alt="Grapefruit slice atop a pile of other slices"><br>
+     <input type="file" id="file" name="img" #Image accept="image/*"  class="image-uploader">
+  </div>
+
+</div>
+</mat-dialog-content>
+
+<!--Button for Cancel & Submit-->
+<mat-dialog-actions align="end">
+  <button class="modalBtn" mat-raised-button mat-dialog-close>CANCEL</button>
+  <button class="addProjBtn" mat-raised-button color="primary" mat-dialog-close (click)="getAddNewProjectPlan()">SUBMIT</button>
+</mat-dialog-actions>

@@ -1,0 +1,31 @@
+.addProjBtn {
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.modalFields {
+  padding-top: 5px;
+  padding-bottom: 25px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.info-style {
+  margin-bottom: 5px;
+}
+
+.projectInfo {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.label-size {
+  font-size: 16px;
+}
+
+.field-style {
+  width: 250px;
+  margin-top: 7px;
+}
