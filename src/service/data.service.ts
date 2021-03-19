@@ -10,7 +10,7 @@ export class DataService {
   
   constructor( public http : HttpClient) { }
 
-  baseURL = "http://localhost/sia-sk-management/sk-management-backend/";
+  baseURL = "http://localhost/sia-sk-management/backend/";
 
   //FOR PUSHING DATA FROM FRONTEND TO BACKEND
   sendApiRequest(method: any , data: any) {
