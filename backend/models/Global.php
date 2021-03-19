@@ -26,6 +26,7 @@
 			return $this->sendPayload($data, "success", $errmsg, $code);
 		}
 
+		//add parameters to $tableToReturn
 		public function insert($table, $data) {
 			$fields = []; $values = [];
 			foreach ($data as $key => $value) {
@@ -48,6 +49,7 @@
 				$sql = $this->pdo->prepare($sqlstr);
 				$sql->execute($values);
 				return $this->select("sk_position", null);
+				// $tableToReturn
 
 			} catch(\PDOException $e) {
 				$errmsg = $e->getMessage(); $code = 403;

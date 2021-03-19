@@ -30,6 +30,12 @@
 					echo json_encode($globalMethod->insert("sk_position", $d), JSON_PRETTY_PRINT);
 				break;
 
+				// //INSERTING SAMPLE
+				// case 'insertposition':
+				// 	$d = json_decode(base64_decode(file_get_contents("php://input")));
+				// 	echo json_encode($globalMethod->insert("sk_position", $d, "tbl_position"), JSON_PRETTY_PRINT);
+				// break;
+
                 //UPDATING DATA
 				case 'updateposition':
 					if (count($req) > 1) {
